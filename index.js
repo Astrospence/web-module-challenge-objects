@@ -53,9 +53,8 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  }
   
-  function discount(person){
+  discount: function who(person){
     if(person === 'teacher' || person === 'student'){
       burger.price = 18 * 0.75;
     }else{
@@ -65,7 +64,9 @@ const burger = {
     return burger.price;
   }
 
-console.log('Task 2', 'TeacherDiscount=', discount('teacher'), 'StudentDiscount=', discount('student'), 'PublicDiscount=', discount('public'));
+}
+  
+console.log('Task 2', 'TeacherDiscount=', burger.discount('teacher'), 'StudentDiscount=', burger.discount('student'), 'PublicDiscount=', burger.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
